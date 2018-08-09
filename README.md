@@ -35,12 +35,18 @@ docker exec -it -u 0 neutron_server bash
 
 
 修改配置信息：
+
  vim /etc/kolla/octavia-api/octavia.conf
+ 
 
    cp /etc/kolla/octavia-api/config.json /etc/kolla/octavia-worker/
+   
    cp /etc/kolla/octavia-api/config.json /etc/kolla/octavia-health-manager/
+   
    cp /etc/kolla/octavia-api/config.json /etc/kolla/octavia-housekeeping/
+   
  docker restart octavia_api octavia_worker octavia_health_manager octavia_housekeeping
+ 
  docker ps -a | grep octavia
  netstat -ntpl | grep 9876
 
