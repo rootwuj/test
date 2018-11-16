@@ -17,5 +17,6 @@ rancher:
         address: 192.168.1.81/24
         gateway: 192.168.1.1
       network2:
-        ssid: Rancher@test
-        scan_ssid
+        ssid: RancherLabs_SY
+        psk: Rancher@Shenyang
+        scan_ssid: 1
