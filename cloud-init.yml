@@ -1,9 +1,9 @@
 #cloud-config
 rancher:
   network:
-    dns:
-      nameservers:
-      - 8.8.8.8
+#    dns:
+#      nameservers:
+#      - 8.8.8.8
     interfaces:
       wlan0:
         wifi_network: network1
@@ -14,8 +14,8 @@ rancher:
         ssid: RancherLabs_SY
         psk: Rancher@Shenyang
         scan_ssid: 1
-        address: 192.168.1.81/24
-        gateway: 192.168.1.1
+#        address: 192.168.1.81/24
+#        gateway: 192.168.1.1
  #     network2:
  #       ssid: RancherLabs_SY
  #       psk: Rancher@Shenyang
