@@ -2,13 +2,13 @@ stages:
 - name: test1
   steps:
   - publishImageConfig:
-      dockerfilePath: ./server/Dockerfile
+      dockerfilePath: ./Dockerfile
       buildContext: ./server
       tag: test/test:1.0
 - name: test2
   steps:
   - publishImageConfig:
-      dockerfilePath: ./test/Dockerfile
+      dockerfilePath: ./Dockerfile
       buildContext: ./test
       tag: test2/test2:1.0
 timeout: 60
