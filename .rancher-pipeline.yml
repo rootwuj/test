@@ -5,10 +5,13 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: ./server
       tag: test/test:1.0
+      registry: 127.0.0.1:34592
 - name: test2
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: ./test
       tag: test2/test2:1.0
+      registry: 127.0.0.1:34592
 timeout: 60
+notification: {}
