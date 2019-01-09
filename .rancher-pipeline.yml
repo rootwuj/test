@@ -1,22 +1,14 @@
 stages:
-- name: test
+- name: test1
   steps:
   - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: rootwuj/nginx
-      pushRemote: true
-      registry: index.docker.io
-    when:
-      event:
-        include:
-        - pull_request
-- name: test
+      dockerfilePath: ./server/Dockerfile
+      buildContext: ./server
+      tag: test/test:1.0
+- name: test2
   steps:
-  - applyYamlConfig:
-      path: ./deployment.yaml
-    when:
-      event:
-        include:
-        - tag
+  - publishImageConfig:
+      dockerfilePath: ./test/Dockerfile
+      buildContext: ./test
+      tag: test2/test2:1.0
 timeout: 60
