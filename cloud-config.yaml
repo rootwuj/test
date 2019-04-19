@@ -1,6 +1,6 @@
-hostname: wujing
+hostname: wujingaa
 runcmd:
-- echo "test" > /home/rancher/wujing
+- echo "test" > /home/rancher/wujingaa
 k3os:
   password: rancher@123
   ssh:
@@ -18,4 +18,12 @@ k3os:
       searches:
       - mydomain.com
       - example.com
-
+    interfaces:
+      enp0s3:
+    	addresses:
+    	- 192.168.1.103/24
+    	gateway: 192.168.1.2
+      enp0s8:
+    	addresses:
+    	- 192.168.1.103/24
+    	gateway: 192.168.1.2
