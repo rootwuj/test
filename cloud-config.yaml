@@ -3,9 +3,9 @@ runcmd:
 - echo "test" > /home/rancher/wujing
 k3os:
   password: rancher@123
-  ssh:
-    authorized_keys:
-    - ssh-rsa /home/rancher/.ssh/id_rsa
+#  ssh:
+#    authorized_keys:
+#    - ssh-rsa /home/rancher/.ssh/id_rsa
   modules:
   - kvm
   sysctl:
