@@ -11,13 +11,13 @@ k3os:
   sysctl:
     net.ipv4.conf.default.rp_filter: 1
   network:
-    dns:
-      nameservers:
-      - 8.8.8.8
-      - 4.4.4.4
-      searches:
-      - mydomain.com
-      - example.com
+#    dns:
+#      nameservers:
+#      - 8.8.8.8
+#      - 4.4.4.4
+#      searches:
+#      - mydomain.com
+#      - example.com
     interfaces:
       enp0s3:
     	addresses:
