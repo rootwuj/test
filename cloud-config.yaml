@@ -19,4 +19,4 @@ k3os:
       - mydomain.com
       - example.com
 k3s:
-  role: server
+  role: agent
