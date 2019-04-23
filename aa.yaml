@@ -37,12 +37,12 @@ roleRef:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: cattle-credentials-13a0698
+  name: cattle-credentials-dc579f8
   namespace: cattle-system
 type: Opaque
 data:
-  url: "aHR0cHM6Ly81NC4xNjguMTMzLjI0OA=="
-  token: "bHZueDVqcnQ4Y2xydHhjc2M3cWJjeDkyc3BmbGdudzd0Y3I5c3Q3bXh4Z3dkbXZzZ3RxbWp0"
+  url: "aHR0cHM6Ly8xOTIuMTY4LjEuOTc6ODQ0Mw=="
+  token: "OHZwZjk0emtjY2hsN25tZmpsbDJ2bHBma2x2bHFrajZqc3E0dDVsNGs1N3Q5dmtyZG1qY21q"
 
 ---
 
@@ -95,9 +95,9 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
           - name: CATTLE_SERVER
-            value: "https://54.168.133.248"
+            value: "https://192.168.1.97:8443"
           - name: CATTLE_CA_CHECKSUM
-            value: "c6cea45b562d1379a711f1f8232a08dfe38fbbe8651945086af0705c31b32188"
+            value: "86e3d627ce65e8c48dea4a72c9b975862ee5fe2f53e4394439167d680672f18b"
           - name: CATTLE_CLUSTER
             value: "true"
           - name: CATTLE_K8S_MANAGED
@@ -110,7 +110,7 @@ spec:
       volumes:
       - name: cattle-credentials
         secret:
-          secretName: cattle-credentials-13a0698
+          secretName: cattle-credentials-dc579f8
 
 ---
 
@@ -156,9 +156,9 @@ spec:
             fieldRef:
               fieldPath: spec.nodeName
         - name: CATTLE_SERVER
-          value: "https://54.168.133.248"
+          value: "https://192.168.1.97:8443"
         - name: CATTLE_CA_CHECKSUM
-          value: "c6cea45b562d1379a711f1f8232a08dfe38fbbe8651945086af0705c31b32188"
+          value: "86e3d627ce65e8c48dea4a72c9b975862ee5fe2f53e4394439167d680672f18b"
         - name: CATTLE_CLUSTER
           value: "false"
         - name: CATTLE_K8S_MANAGED
@@ -192,6 +192,6 @@ spec:
           type: DirectoryOrCreate
       - name: cattle-credentials
         secret:
-          secretName: cattle-credentials-13a0698
+          secretName: cattle-credentials-dc579f8
   updateStrategy:
     type: RollingUpdate
