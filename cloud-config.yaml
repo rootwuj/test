@@ -2,6 +2,7 @@ hostname: wujingaa
 runcmd:
 - echo "test" > /home/rancher/wujingaa
 k3os:
+  registry_mirror: https://s06nkgus.mirror.aliyuncs.com
   password: rancher@123
   ssh:
     authorized_keys:
