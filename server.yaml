@@ -21,3 +21,5 @@ k3os:
       - example.com
 k3s:
   role: server
+  airgap_images:
+  - http://192.168.1.97/k3os/k3s-airgap-images-amd64.tar
