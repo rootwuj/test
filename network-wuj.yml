@@ -1,6 +1,6 @@
 #cloud-config
 rancher:
-password: rancher
+  password: rancher
   network:
     interfaces:
       bond0:
