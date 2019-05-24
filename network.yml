@@ -14,3 +14,4 @@ rancher:
       mac=08:00:27*:
         bond: bond0
         dhcp: false
+        
