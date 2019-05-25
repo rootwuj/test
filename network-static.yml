@@ -4,9 +4,9 @@ rancher:
     interfaces:
       bond0:
         addresses:
-        - 192.168.1.110/24
-        - 192.168.1.111/24
-        - 192.168.1.109/24
+        - 192.168.1.112/24
+        - 192.168.1.114/24
+        - 192.168.1.113/24
         gateway: 192.168.1.1  
         bond_opts:
           downdelay: "200"
@@ -16,7 +16,7 @@ rancher:
           updelay: "200"
           xmit_hash_policy: layer3+4
         post_up:
-        - ip route add 192.168.1.0/24  via 192.168.1.108
+        - ip route add 192.168.1.0/24  via 192.168.1.115
       mac=08:00:27*:
         bond: bond0
         
